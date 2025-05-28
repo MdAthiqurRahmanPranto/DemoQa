@@ -14,7 +14,9 @@ test('Click on Widgets card on demoqa homepage', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Last Name' }).fill('d');
   await page.getByText('Male', { exact: true }).click();
   await page.getByRole('button', { name: 'Submit' }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
+  await page.getByRole('button', { name: 'Submit' }).click();
 
-  // Optional: Assert you're on the right page
-  //await expect(page).toHaveURL(/.*widgets/);
+  // 1st push from my local machine 
+
 });
