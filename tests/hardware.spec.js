@@ -2,6 +2,8 @@
 const { test } = require('./Auth');
 const { HardwarePage } = require('../pages/HardwarePage');
 
+
+function hardwareTests() {  
 test('Create hardware - success flow', async ({ loggedInPage }) => {
   const hardwarePage = new HardwarePage(loggedInPage);
 
@@ -10,3 +12,7 @@ test('Create hardware - success flow', async ({ loggedInPage }) => {
   await hardwarePage.createHardware(version);
   await hardwarePage.assertSuccessMessage();
 });
+
+}
+
+module.exports = hardwareTests; 
